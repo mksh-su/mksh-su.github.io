@@ -1,0 +1,143 @@
+:root {
+    --text-color: #7c7c7c;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    padding: 90px 0;
+}
+
+p {
+    color: var(--text-color);
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.9);
+}
+
+.intro-sect {
+    background-image: url(../img/intro-bg.jpg);
+    background-size: cover;
+    padding: 270px 0 230px;
+}
+
+.intro-text-block {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 72px;
+}
+
+.intro-desc {
+    font-size: 24px;
+    color: white;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.testimonial-item {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.testimonial-name, .testimonial-role {
+    margin: 0;
+}
+
+.testimonial-photo {
+    margin-right: 17px;
+    transition: .3s ease-in-out;
+    border-radius: 50%;
+    /* animation: photo-scale 5s infinite; */
+}
+
+.testimonial-photo:hover {
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+}
+
+.testimonial-text {
+    text-align: center;
+}
+
+footer {
+    background-color: #eee;
+    padding: 30px;
+}
+
+.second-page .navbar {
+    position: static;
+    width: 100%;
+    background-color: #999;
+}
+
+.second-page {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr auto;
+}
+
+.wrapper {
+    /* min-height: calc(100vh - 100px); */
+    /* flex-grow: 1; */
+}
+
+@media (max-width: 768px) {
+    .process-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+    .testimonial-item {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    .intro-sect {
+        padding: 100px 0 60px;
+    }
+}
